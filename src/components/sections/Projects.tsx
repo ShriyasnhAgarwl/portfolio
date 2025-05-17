@@ -79,8 +79,11 @@ const Projects = () => {
 
   // State for filtered projects (all or featured)
   const [showAll, setShowAll] = useState(false);
-  const displayedProjects = showAll ? projects : projects.filter(project => project.featured);
-
+  const displayedProjects = projects;
+  // console.log(showAll);
+  const toogleShowAll = () => {
+    setShowAll(!showAll);
+  }
   // Animation variants
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -129,7 +132,7 @@ const Projects = () => {
           <div className="inline-flex rounded-md shadow-sm" role="group">
             <button
               type="button"
-              onClick={() => setShowAll(false)}
+              onClick={toogleShowAll}
               className={`px-4 py-2 text-sm font-medium rounded-l-lg ${
                 !showAll 
                   ? 'bg-primary text-white' 
@@ -140,7 +143,7 @@ const Projects = () => {
             </button>
             <button
               type="button"
-              onClick={() => setShowAll(true)}
+              onClick={toogleShowAll}
               className={`px-4 py-2 text-sm font-medium rounded-r-lg ${
                 showAll 
                   ? 'bg-primary text-white' 

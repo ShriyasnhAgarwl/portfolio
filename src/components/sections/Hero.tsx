@@ -29,7 +29,7 @@ const Hero = () => {
               transition={{ delay: 0.2, duration: 0.5 }}
             >
               <h2 className="text-lg md:text-xl font-medium text-primary dark:text-secondary mb-2">
-                Hello, I'm a
+                Hello, I'm 
               </h2>
             </motion.div>
             
@@ -39,7 +39,7 @@ const Hero = () => {
               animate={{ opacity: 1 }}
               transition={{ delay: 0.3, duration: 0.5 }}
             >
-              Full Stack Developer
+             Shriyansh Agarwal
             </motion.h1>
             
             <motion.p 
@@ -48,10 +48,10 @@ const Hero = () => {
               animate={{ opacity: 1 }}
               transition={{ delay: 0.4, duration: 0.5 }}
             >
-              I specialize in building robust web applications using the MERN stack. 
-              With 2 years of experience, I create seamless user experiences with 
-              modern frontend technologies and scalable backend solutions.
-            </motion.p>
+              a frontend developer with almost 2 years of experience in React.js, Next.js, Tailwind CSS, and TypeScript.
+              I specialize in building robust web applications using the MERN stack.
+              I have worked on various projects and have a good understanding of the latest trends in web development.
+             </motion.p>
             
             <motion.div 
               className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
