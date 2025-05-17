@@ -1,5 +1,6 @@
-/** @type {import('tailwindcss').Config} */
-export default {
+const colors = require('tailwindcss/colors');
+
+module.exports = {
   content: [
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
@@ -8,8 +9,9 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: "#050816",
-        secondary: "#aaa6c3",
+        ...colors,
+        primary: "#3b82f6",
+        secondary: "#93c5fd",
         tertiary: "#151030",
         "black-100": "#100d25",
         "black-200": "#090325",
@@ -17,6 +19,8 @@ export default {
       },
       boxShadow: {
         card: "0px 35px 120px -15px #211e35",
+        sm: "0 1px 2px 0 rgb(0 0 0 / 0.05)",
+        lg: "0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1)",
       },
       screens: {
         xs: "450px",
@@ -26,6 +30,9 @@ export default {
       },
     },
   },
-  plugins: [],
-}
-
+  plugins: [
+    require('@tailwindcss/forms'),
+    require('@tailwindcss/typography'),
+    require('@tailwindcss/aspect-ratio'),
+  ],
+}; 
